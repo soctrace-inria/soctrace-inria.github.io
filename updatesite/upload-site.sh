@@ -35,8 +35,10 @@ function help() {
 }
 
 # verify if the string in $2 is contained in the list $1
-function contains() {
-    [[ $1 =~ $2 ]] && echo 1 || echo 0
+function contains () {
+    local e
+    for e in $1; do [[ $e == $2 ]] && return 1; done
+    return 0
 }
 
 # main function
@@ -55,8 +57,8 @@ function main() {
 	help
     fi
 
-    KNOWN=`contains "${PROJECTS}" "${PROJECT}"`
-    if [ $KNOWN = "0" ]; then
+    contains "${PROJECTS}" "${PROJECT}"
+    if [ $? -eq 0 ]; then
 	echo "Error: project $PROJECT is unknown"
 	help
     fi
@@ -74,10 +76,7 @@ function main() {
     git commit -m "Upload update site for ${PROJECT}"
     git push
 
-    RET=$?
-    if [ "$RET" = "0" ]; then
-	echo "Tudo bem"
-    else
+    if [ $? -ne 0 ]; then
 	echo "An error occurred while uploading the site"
     fi
 
