@@ -23,7 +23,6 @@ SITE_CONTENT="features plugins artifacts.jar content.jar"
 # projects
 PROJECTS="framesoc ocelotl framesoc.importers"
 
-
 # print the help
 function help() {
     echo ""
