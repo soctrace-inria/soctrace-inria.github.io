@@ -21,7 +21,7 @@ UPDATESITE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SITE_CONTENT="features plugins artifacts.jar content.jar"
 
 # projects
-PROJECTS="framesoc ocelotl framesoc-importers"
+PROJECTS="framesoc ocelotl framesoc.importers"
 
 # print the help
 function help() {
