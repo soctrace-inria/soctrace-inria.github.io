@@ -8,6 +8,6 @@
   <children size='3'>
     <child location='ocelotl/'/>
     <child location='framesoc/'/>
-    <child location='framesoc.importers/'/>
+    <child location='framesoc-importers/'/>
   </children>
 </repository>
