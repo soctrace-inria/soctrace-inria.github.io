@@ -72,6 +72,7 @@ function main() {
     done
 
     echo "* Uploading modifications"
+
     git add --all
     git commit -m "Upload update site for ${PROJECT}"
     git push
