@@ -74,6 +74,7 @@ function main() {
 
     git add --all
     git commit -m "Upload update site for ${PROJECT}"
+    git pull
     git push
 
     if [ $? -ne 0 ]; then
