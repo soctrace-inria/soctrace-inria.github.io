@@ -27,7 +27,7 @@ PROJECTS="framesoc ocelotl framesoc.importers"
 function help() {
     echo ""
     echo "Usage: ./upload-site.sh LOCAL_SITE PROJECT"
-    echo "LOCAL_SITE : absolute path of the directory containing the Eclipse update site content (${SITE_CONTENT})"
+    echo "LOCAL_SITE : path of the directory containing the Eclipse update site content (${SITE_CONTENT})"
     echo "PROJECT : one of {$PROJECTS}"
     echo ""
     exit
